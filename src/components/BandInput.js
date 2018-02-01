@@ -27,9 +27,9 @@ class BandInput extends Component {
   }
   render() {
     return (
-      <div>
+      <form onSubmit={(e => this.handleSubmit(e))} >
         bands component
-      </div>
+      </form>
     );
   }
 };
