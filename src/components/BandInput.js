@@ -14,6 +14,17 @@ class BandInput extends Component {
       text: e.target.value
     })
   }
+
+  handleSubmit(e) {
+    e.preventDefault()
+    this.props.store.dispatch({
+      type: 'ADD_BAND',
+      band: this.state.text
+    })
+    this.setState({
+      text: ""
+    })
+  }
   render() {
     return (
       <div>
